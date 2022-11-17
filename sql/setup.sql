@@ -17,3 +17,14 @@ CREATE TABLE secrets (
     description TEXT NOT NULL,
     created_at timestamp DEFAULT CURRENT_TIMESTAMP
 );
+
+INSERT INTO secrets 
+(title, description)
+VALUES (
+    'Super cool secret',
+    'i love coding'
+),
+(
+    'top secret',
+    'coding is cool'
+);
