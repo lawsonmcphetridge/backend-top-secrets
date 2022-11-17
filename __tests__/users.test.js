@@ -38,11 +38,11 @@ describe('secret tests', () => {
 })
 
     it('test to see if a user is logged in', async () => {
-        const [agent, user] = await registerAndLogin();
-        const me = await agent.get('/api/v1/users/sessions');
-        expect(me.body).toEqual({
-            ...user
-        })
+        const agent = request.agent(app);
+        const user = await UserService.create({ ...fakeAccount });
+        await agent.post('/api/v1/users/sessions').send({ email: 'test@example.com', password: '12345' });
+        const res = await agent.get('/api/v1/users/');
+        expect(res.status).toEqual(403);
   })
 
 })
