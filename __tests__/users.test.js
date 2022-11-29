@@ -39,6 +39,10 @@ describe('secret tests', () => {
     expect(resp.status).toBe(204);
   
   });
+
+  afterAll(() => {
+    pool.end();
+  });
 });
 
 

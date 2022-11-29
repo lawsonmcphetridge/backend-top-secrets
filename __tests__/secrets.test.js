@@ -27,4 +27,8 @@ describe('secret tests', () => {
       ]
     `);
   });
+
+  afterAll(() => {
+    pool.end();
+  });
 });
