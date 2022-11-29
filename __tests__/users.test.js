@@ -28,7 +28,7 @@ describe('secret tests', () => {
     
   it('delete /api/v1/sessions signs out a user', async () => {
     const agent = request.agent(app);
-    await UserService.create({ ...fakeAccount });
+    await UserService.create(fakeAccount);
     await agent.post('/api/v1/users/sessions').send({
       firstname: 'Lawson',
       lastname: 'McPhetridge',

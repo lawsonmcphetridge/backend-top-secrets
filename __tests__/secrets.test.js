@@ -13,13 +13,13 @@ describe('secret tests', () => {
     expect(resp.body).toMatchInlineSnapshot(`
       Array [
         Object {
-          "created_at": "2022-11-17T21:09:21.025Z",
+          "created_at": "2022-11-17T21:59:09.720Z",
           "description": "i love coding",
           "id": "1",
           "title": "Super cool secret",
         },
         Object {
-          "created_at": "2022-11-17T21:09:21.025Z",
+          "created_at": "2022-11-17T21:59:09.720Z",
           "description": "coding is cool",
           "id": "2",
           "title": "top secret",
